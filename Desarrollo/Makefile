@@ -16,9 +16,10 @@ all: $(APP)
 $(APP): $(SOURCE)
 	@echo "Compilando Documento:"
 	@$(CC) $(MAINSR) 1> /dev/null
+	@$(CC) $(MAINSR) 1> /dev/null
 	@echo "Compilacion Exitosa."
 	@echo "Limpiando temporales"
-	@rm *.log *.aux
+	@rm *.log *.aux *.out 2> /dev/null
 	@echo "Generando Documento"
 	@mv main.pdf pdf/Desarrollo.pdf
 	@echo "Trabajo finalizado."

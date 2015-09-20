@@ -1,0 +1,133 @@
+\section{Preparación Ambiente}
+\label{sec:2-ambiente}
+
+  Para utilizar los servicios diseñados e implementados
+  usando el sistema \ssdAxis\ 
+  es necesario contar con una serie de prerrequisitos
+  a instalar en el sistema base donde van a operar
+  los servicios.
+  Las características del sistema base
+  en las que se implementa la estructura de servicios
+  para este trabajo
+  es resumida en la tabla \ref{tab:2-1-sistema-base}.
+
+  \begin{table}[H]
+    \centering
+    \begin{tabular}{ll}
+      \hline
+      Sistema Operativo & Fedora 22 WorkStation \\
+      \hline
+      Placa Madre       & ASUSTeK M4A78LT-M-LE \\
+      \hline
+      Procesador        & AMD Athlon\texttrademark\ II X2 250 (dual core) 64 bits \\
+      \hline
+      Memoria           & 2 \(\times\)  DIMM Synchronous \(1333 [MHz]\) \(2 [GiB]\) \\
+      \hline
+    \end{tabular}
+    \caption{Características sistema base}
+    \label{tab:2-1-sistema-base}
+  \end{table}
+
+  A continuación se procede a describir
+  cada programa y/o paquete de software
+  instalado en el sistema base
+  para la implementación y operación
+  de los servicios diseñados.
+
+\subsection{Lenguaje Base}
+\label{subsec:2-1-lenguaje-base}
+
+  El sistema provisto por \ssdAxis\
+  es compatible con los lenguajes de programación
+  \emph{Ansi C} y \emph{Java}.
+  Para ambos lenguajes existen librerías que permiten
+  programar desde cero los clientes
+  \emph{SOAP} para el experimento,
+  sin embargo el lenguaje \emph{Java}
+  posee la ventaja de ser el lenguaje nativo
+  del sistema \ssdAxis.
+  Adicionalmente,
+  el servidor web más popular para
+  levantar servicios y aplicaciones
+  programadas en \emph{Java}
+  llamado \ssdTomcat\ 
+  es altamente compatible con
+  el sistema \ssdAxis\ y sus predecesores.
+
+  \paragraph{Java}
+  Para programar y ejecutar aplicaciones
+  escritas usando el lenguaje \emph{Java}
+  es necesario instalar el
+  sistema de desarrollo provisto por 
+  los mantenedores del sistema.
+  Al año 2015,
+  tanto el lenguaje \emph{Java}
+  como todos los servicios asociados
+  creados por la empresa
+  \ssdSun\ son propiedad de
+  la empresa \ssdOracle\ 
+  luego de que la primera adquiriera a la última
+  durante el año 2010.
+  Actualmente
+  \ssdOracle\ mantiene una versión propietaria
+  del lenguaje y su ambiente de ejecución
+  conocido como la \emph{Java Virtual Machine}
+  o \emph{JVM},
+  sin embargo existen versiones \emph{open source}
+  disponibles en la mayoría de las distribuciones
+  de \emph{Linux} apoyadas por \ssdOracle.
+  Para este trabajo se describirá como instalar
+  el ambiente de desarrollo 
+  \emph{open JDK} para el sistema base a utilizar.
+
+  \paragraph{Java Development Kit}
+  Para el sistema operativo \emph{Fedora 22}
+  hay varias formas de instalar el 
+  ambiente de desarrollo.
+  En líneas generales se necesitan
+  tres componentes para utilizar el lenguaje
+  \emph{Java}:
+  \begin{itemize}
+  \item[\textbf{CI}]
+    \emph{Módulos.}
+    Que contienen los servicios básicos
+    o estándar del sistema,
+    así como las librerías para
+    realizar tareas más avanzadas
+    como programación distribuída en la red
+    o programación en paralelo con múltiples
+    hilos de ejecución.
+  \item[\textbf{CII}]
+    \emph{Compilador Bytecode.}
+    Que traduce el código fuente escrito
+    en \emph{Java} a un dialecto
+    ejecutable por la \emph{JVM}.
+  \item[\textbf{CIII}]
+    \emph{Runtime Environment.}
+    Correspondiente a la \emph{JVM}
+    implementada y programas de apoyo,
+    como opciones de depuración y perfil.
+  \end{itemize}
+  Estas tres componentes vienen incluídas
+  en varios paquetes de distribución publicados
+  en Internet.
+  La versión \emph{open source}
+  a usar corresponde al 
+  \emph{Open Java Development Kit}
+  u \emph{Open JDK}\footnote{\ssdJDKLink}.
+  
+  \paragraph{Instalación}
+  Para instalar el paquete 
+  \emph{Open JDK}
+  en el sistema base se puede seguir
+  dos cursos de acción,
+  donde el primero corresponde a descargar
+  el código fuente completo
+  del \emph{JDK}
+  y proceder a construirlo en el sistema base.
+  Para esto es necesario descargar la última versión
+  desde el repositorio \emph{Mercurial} oficial 
+  \url{http://hg.openjdk.java.net/jdk8/jdk8/jdk}
+  
+
+  
